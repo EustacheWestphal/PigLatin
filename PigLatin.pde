@@ -1,6 +1,6 @@
 public void setup() 
 {
-  String[] lines = loadStrings("words.txt");
+  String[] lines = {"beast","dough","happy","question","star","three","eagle","try"};
   System.out.println("there are " + lines.length + " lines");
   for (int i = 0 ; i < lines.length; i++) 
   {
@@ -28,12 +28,17 @@ public String pigLatin(String sWord)
   {
     return sWord + "way";
   }
-  else if(sWord.substring(0,2).equals("qu"))
+  else if(sWord.substring(0,2).equals("st") || sWord.substring(0,2).equals("qu"))
   {
     return sWord.substring(2) + sWord.substring(0,2) + "ay";
+  }
+   else if(sWord.substring(0,3).equals(“thr”))
+  {
+     return sWord.substring(3) + sWord.substring(0,3) + “ay”;
   }
   else
   {
     return sWord.substring(1) + sWord.substring(0,1) + "ay";
   }
 }
+
